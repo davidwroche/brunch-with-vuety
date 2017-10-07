@@ -1,12 +1,31 @@
+<style scoped>
+    .container{
+        background-color: white;
+    }
+</style>
+
 <template>
-
-  <router-view></router-view>
-
+    <div class="container">
+        <div class="row">
+            <hello></hello>
+        </div>
+    </div>
 </template>
 
 <script>
-export default {}
-</script>
+    import Hello from './components/Hello.vue';
 
-<style>
-</style>
+    export default {
+        components: {
+            hello: Hello,
+        },
+
+        data() {
+            return {
+            }
+        },
+        beforeCreate(){
+        console.log('hi')
+        }
+    }
+</script>
